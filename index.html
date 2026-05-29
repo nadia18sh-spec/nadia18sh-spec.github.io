@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ko" class="scroll-smooth">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="00Safety는 산업안전 교육, 위험성 평가, 안전진단, 안전관리 컨설팅을 한곳에서 안내하는 가상의 전문 안전 홈페이지입니다."
+      content="00Safety는 산업안전 교육, 위험성 평가, 안전진단, 안전관리 컨설팅을 안내하는 전문 안전 홈페이지입니다."
     />
     <link rel="canonical" href="https://00safety.store/" />
     <link rel="preload" as="image" href="hero-safety.png" />
@@ -13,484 +13,302 @@
     <meta property="og:title" content="00Safety | 산업안전 교육 및 안전관리 컨설팅" />
     <meta
       property="og:description"
-      content="교육, 위험성 평가, 현장 점검, 자료실, 상담 접수를 빠르게 연결하는 실무형 안전 포털 홈페이지입니다."
+      content="교육, 위험성 평가, 현장 점검, 안전자료, 컨설팅 문의를 한곳에서 연결하는 산업안전 전문 홈페이지입니다."
     />
     <meta property="og:url" content="https://00safety.store/" />
     <meta property="og:image" content="https://00safety.store/hero-safety.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>00Safety | 산업안전 교육 및 안전관리 컨설팅</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              navy: "#10233f",
-              navy2: "#183a63",
-              safety: "#128064",
-              safety2: "#e8f6f0",
-              warning: "#f6b53f",
-              ink: "#1d2733"
-            },
-            boxShadow: {
-              soft: "0 18px 50px rgba(16, 35, 63, 0.12)"
-            }
-          }
-        }
-      };
-    </script>
-    <style>
-      .hero-bg {
-        background-image:
-          linear-gradient(90deg, rgba(16, 35, 63, 0.96) 0%, rgba(16, 35, 63, 0.78) 46%, rgba(16, 35, 63, 0.18) 100%),
-          url("hero-safety.png");
-        background-position: center right;
-        background-size: cover;
-      }
-
-      @media (max-width: 768px) {
-        .hero-bg {
-          background-image:
-            linear-gradient(180deg, rgba(16, 35, 63, 0.96) 0%, rgba(16, 35, 63, 0.82) 70%, rgba(16, 35, 63, 0.62) 100%),
-            url("hero-safety.png");
-          background-position: center bottom;
-        }
-      }
-
-      .focus-ring:focus-visible {
-        outline: 3px solid rgba(18, 128, 100, 0.35);
-        outline-offset: 3px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-white text-ink antialiased">
-    <a
-      href="#main"
-      class="focus-ring fixed left-4 top-4 z-[100] -translate-y-24 rounded-md bg-navy px-4 py-3 text-sm font-bold text-white transition focus:translate-y-0"
-    >
-      본문 바로가기
-    </a>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
 
-    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div class="mx-auto flex min-h-20 w-[min(1240px,calc(100%-32px))] items-center justify-between gap-4">
-        <a href="#main" class="focus-ring flex items-center gap-3 rounded-md" aria-label="00Safety 홈">
-          <span class="grid h-11 w-11 place-items-center rounded-lg bg-gradient-to-br from-navy to-safety text-sm font-black text-white">
-            00
-          </span>
-          <span class="leading-tight">
-            <strong class="block text-lg font-black text-navy">00Safety</strong>
-            <span class="hidden text-xs font-bold text-slate-500 sm:block">Industrial Safety Portal</span>
+    <header class="site-header" data-header>
+      <div class="header-inner">
+        <a class="brand" href="#main" aria-label="00Safety 홈">
+          <span class="brand-mark" aria-hidden="true">00</span>
+          <span>
+            <strong>00Safety</strong>
+            <small>Industrial Safety Consulting</small>
           </span>
         </a>
 
-        <nav class="hidden items-center gap-1 lg:flex" aria-label="주요 메뉴">
-          <a class="focus-ring rounded-md px-4 py-3 text-sm font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#services">업무안내</a>
-          <a class="focus-ring rounded-md px-4 py-3 text-sm font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#education">교육신청</a>
-          <a class="focus-ring rounded-md px-4 py-3 text-sm font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#resources">자료실</a>
-          <a class="focus-ring rounded-md px-4 py-3 text-sm font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#notice">알림</a>
-          <a class="focus-ring rounded-md px-4 py-3 text-sm font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#contact">문의</a>
+        <nav class="main-nav" aria-label="주요 메뉴" data-nav>
+          <a href="#services">업무안내</a>
+          <a href="#education">교육과정</a>
+          <a href="#resources">자료실</a>
+          <a href="#process">진행절차</a>
+          <a href="#contact">문의</a>
         </nav>
 
-        <div class="flex items-center gap-2">
-          <button
-            type="button"
-            class="focus-ring grid h-11 w-11 place-items-center rounded-lg border border-slate-200 text-navy hover:border-safety hover:text-safety"
-            data-open-search
-            aria-label="검색 열기"
-            aria-expanded="false"
-          >
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <form class="header-search" role="search" aria-label="사이트 검색" data-search-form>
+          <label class="sr-only" for="site-search">검색어</label>
+          <input id="site-search" name="q" type="search" placeholder="위험성평가, 교육, 체크리스트" />
+          <button type="submit" aria-label="검색">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="11" cy="11" r="7"></circle>
               <path d="m20 20-3.8-3.8"></path>
             </svg>
           </button>
-          <a class="focus-ring hidden rounded-lg bg-safety px-5 py-3 text-sm font-black text-white hover:bg-emerald-800 sm:inline-flex" href="#contact">
-            상담 문의
-          </a>
-          <button
-            type="button"
-            class="focus-ring grid h-11 w-11 place-items-center rounded-lg border border-slate-200 text-navy lg:hidden"
-            data-menu-button
-            aria-label="모바일 메뉴 열기"
-            aria-expanded="false"
-          >
-            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M4 7h16M4 12h16M4 17h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
+        </form>
 
-      <div class="hidden border-t border-slate-200 bg-white lg:hidden" data-mobile-menu>
-        <nav class="mx-auto grid w-[min(1240px,calc(100%-32px))] gap-1 py-3" aria-label="모바일 메뉴">
-          <a class="rounded-md px-3 py-3 font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#services">업무안내</a>
-          <a class="rounded-md px-3 py-3 font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#education">교육신청</a>
-          <a class="rounded-md px-3 py-3 font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#resources">자료실</a>
-          <a class="rounded-md px-3 py-3 font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#notice">알림</a>
-          <a class="rounded-md px-3 py-3 font-extrabold text-slate-700 hover:bg-safety2 hover:text-safety" href="#contact">문의</a>
-        </nav>
-      </div>
+        <a class="btn btn-primary header-cta" href="#contact">상담 문의</a>
 
-      <form class="hidden border-t border-slate-200 bg-slate-50" role="search" aria-label="사이트 검색" data-search-panel>
-        <div class="mx-auto grid w-[min(900px,calc(100%-32px))] gap-3 py-4 md:grid-cols-[auto_1fr_auto] md:items-center">
-          <label for="site-search" class="font-black text-navy">통합검색</label>
-          <input
-            id="site-search"
-            name="q"
-            type="search"
-            class="focus-ring min-h-12 rounded-lg border border-slate-300 px-4"
-            placeholder="위험성평가, 관리감독자 교육, 체크리스트 검색"
-          />
-          <button type="submit" class="focus-ring rounded-lg bg-navy px-5 py-3 font-black text-white hover:bg-navy2">검색</button>
-        </div>
-      </form>
+        <button class="menu-button" type="button" aria-label="모바일 메뉴 열기" aria-expanded="false" data-menu-button>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main id="main">
-      <section class="hero-bg relative overflow-hidden">
-        <div class="absolute inset-0 bg-[linear-gradient(0deg,rgba(16,35,63,0.50),rgba(16,35,63,0)_44%),repeating-linear-gradient(90deg,rgba(255,255,255,0.07)_0_1px,transparent_1px_128px)]"></div>
-        <div class="relative mx-auto grid min-h-[720px] w-[min(1240px,calc(100%-32px))] items-center py-20 lg:grid-cols-[minmax(0,720px)_1fr]">
-          <div class="pt-10 text-white lg:pt-0">
-            <p class="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-black text-emerald-100">
-              안전관리자와 사업장을 위한 가상 안전 포털
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="container hero-layout">
+          <div class="hero-content">
+            <p class="eyebrow">Industrial Safety Partner</p>
+            <h1 id="hero-title">현장의 위험을 줄이고, 안전관리의 기준을 세웁니다</h1>
+            <p>
+              00Safety는 산업안전 교육, 위험성 평가, 현장 점검, 안전보건관리체계 구축을
+              명확한 절차와 읽기 쉬운 자료로 연결하는 안전 컨설팅 홈페이지입니다.
             </p>
-            <h1 class="max-w-3xl text-4xl font-black leading-tight tracking-normal sm:text-5xl lg:text-6xl">
-              위험을 찾고, 교육으로 바꾸고, 현장 기준으로 남깁니다
-            </h1>
-            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/85">
-              00Safety는 산업안전 교육, 위험성 평가, 안전진단, 자료실, 컨설팅 문의를 한 화면에서 연결하는 실무형 홈페이지 예시입니다.
-            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#education">교육 과정 보기</a>
+              <a class="btn btn-secondary" href="#services">서비스 살펴보기</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <form class="mt-8 max-w-2xl rounded-xl border border-white/15 bg-white p-2 shadow-soft" role="search" aria-label="히어로 검색">
-              <label class="sr-only" for="hero-search">검색어</label>
-              <div class="grid gap-2 sm:grid-cols-[1fr_auto]">
-                <input
-                  id="hero-search"
-                  type="search"
-                  class="focus-ring min-h-14 rounded-lg px-4 text-ink"
-                  placeholder="필요한 안전 업무를 검색하세요"
-                />
-                <button class="focus-ring rounded-lg bg-safety px-6 py-3 font-black text-white hover:bg-emerald-800" type="submit">
-                  검색
-                </button>
+      <section class="quick-section" aria-label="빠른 업무 메뉴">
+        <div class="container quick-grid">
+          <a class="quick-card" href="#education">
+            <strong>교육 신청</strong>
+            <span>법정교육과 직무별 안전교육 안내</span>
+          </a>
+          <a class="quick-card" href="#services">
+            <strong>위험성 평가</strong>
+            <span>위험요인 발굴과 개선대책 수립</span>
+          </a>
+          <a class="quick-card" href="#resources">
+            <strong>자료 찾기</strong>
+            <span>체크리스트, 교육자료, 예방 가이드</span>
+          </a>
+          <a class="quick-card" href="#contact">
+            <strong>상담 예약</strong>
+            <span>사업장 상황에 맞는 컨설팅 문의</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="services" class="section section-muted" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Service Map</p>
+            <h2 id="services-title">사업장 안전관리를 위한 핵심 서비스</h2>
+            <p>
+              업무를 빠르게 이해할 수 있도록 6개 영역으로 구분했습니다. 각 카드는 실제 서비스 등록 시
+              상세 페이지로 확장하기 좋은 구조입니다.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="info-card">
+              <span class="card-number">01</span>
+              <h3>위험성 평가</h3>
+              <p>공정, 설비, 작업절차의 위험요인을 발굴하고 개선 우선순위와 실행 계획을 정리합니다.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-number">02</span>
+              <h3>안전보건관리체계</h3>
+              <p>목표, 책임, 점검, 개선 활동이 반복되도록 사업장 맞춤형 관리 체계를 설계합니다.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-number">03</span>
+              <h3>산업안전 교육</h3>
+              <p>관리감독자, 신규 근로자, 위험작업자를 대상으로 실무 중심 교육 흐름을 제공합니다.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-number">04</span>
+              <h3>건설현장 점검</h3>
+              <p>추락, 낙하, 장비, 임시시설물 등 고위험 항목을 중심으로 현장 개선안을 도출합니다.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-number">05</span>
+              <h3>화학물질·환경 안전</h3>
+              <p>취급 물질, 보관 기준, 비상대응, 표시 체계를 점검하고 관리자료로 정리합니다.</p>
+            </article>
+            <article class="info-card">
+              <span class="card-number">06</span>
+              <h3>안전자료 구축</h3>
+              <p>업종별 체크리스트, 교육자료, 사고 예방 가이드를 찾기 쉬운 자료실로 구성합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section" aria-labelledby="education-title">
+        <div class="container">
+          <div class="section-heading centered">
+            <p class="eyebrow">Education</p>
+            <h2 id="education-title">대상별 안전교육 프로그램</h2>
+            <p>
+              5개 과정을 2-3 배열로 배치해 비대칭 빈칸 없이 안정적인 시선을 만들었습니다.
+              모든 과정명과 시간은 홈페이지 예시 데이터입니다.
+            </p>
+          </div>
+
+          <div class="education-grid">
+            <article class="education-card education-wide">
+              <span class="tag">관리자</span>
+              <h3>관리감독자 교육</h3>
+              <p>작업 전 회의, 보호구 확인, 위험상황 보고, 개선 조치 흐름을 관리자 관점에서 정리합니다.</p>
+              <dl>
+                <div><dt>방식</dt><dd>집체</dd></div>
+                <div><dt>시간</dt><dd>8시간</dd></div>
+              </dl>
+            </article>
+            <article class="education-card education-wide">
+              <span class="tag">입문</span>
+              <h3>신규 근로자 교육</h3>
+              <p>작업장 출입 전 알아야 할 기본 안전수칙, 비상대응, 보호구 착용 기준을 안내합니다.</p>
+              <dl>
+                <div><dt>방식</dt><dd>온라인</dd></div>
+                <div><dt>시간</dt><dd>4시간</dd></div>
+              </dl>
+            </article>
+            <article class="education-card">
+              <span class="tag">고위험</span>
+              <h3>특별안전보건교육</h3>
+              <p>화기, 밀폐공간, 중량물, 고소작업 등 위험작업별 예방 기준을 다룹니다.</p>
+              <dl>
+                <div><dt>방식</dt><dd>혼합</dd></div>
+                <div><dt>시간</dt><dd>16시간</dd></div>
+              </dl>
+            </article>
+            <article class="education-card">
+              <span class="tag">실습</span>
+              <h3>위험성평가 담당자</h3>
+              <p>위험요인 발굴, 위험성 결정, 감소대책 작성, 기록 관리 방법을 실습합니다.</p>
+              <dl>
+                <div><dt>방식</dt><dd>워크숍</dd></div>
+                <div><dt>시간</dt><dd>6시간</dd></div>
+              </dl>
+            </article>
+            <article class="education-card">
+              <span class="tag">상시</span>
+              <h3>온라인 안전교육</h3>
+              <p>반복 수강, 수료 관리, 부서별 학습 현황 확인이 필요한 조직에 적합합니다.</p>
+              <dl>
+                <div><dt>방식</dt><dd>LMS</dd></div>
+                <div><dt>시간</dt><dd>선택</dd></div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="section section-muted" aria-labelledby="resources-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Resources</p>
+            <h2 id="resources-title">공지, 자료, 일정을 3단 컬럼으로 정리</h2>
+            <p>
+              공공 안전 포털에서 익숙한 정보 탐색 방식을 유지하되, 세 개의 게시판을 동일한 비율로 나누어
+              한 화면에서 비교하기 쉽게 구성했습니다.
+            </p>
+          </div>
+
+          <div class="resource-columns">
+            <article class="board-card">
+              <div class="board-head">
+                <h3>공지사항</h3>
+                <a href="#contact">전체 보기</a>
               </div>
-            </form>
-
-            <div class="mt-5 flex flex-wrap gap-2" aria-label="추천 검색어">
-              <button class="rounded-full bg-white/12 px-4 py-2 text-sm font-bold text-white ring-1 ring-white/20 hover:bg-white/20" type="button" data-keyword="안전보건관리체계">#안전보건관리체계</button>
-              <button class="rounded-full bg-white/12 px-4 py-2 text-sm font-bold text-white ring-1 ring-white/20 hover:bg-white/20" type="button" data-keyword="위험성평가">#위험성평가</button>
-              <button class="rounded-full bg-white/12 px-4 py-2 text-sm font-bold text-white ring-1 ring-white/20 hover:bg-white/20" type="button" data-keyword="관리감독자 교육">#관리감독자 교육</button>
-              <button class="rounded-full bg-white/12 px-4 py-2 text-sm font-bold text-white ring-1 ring-white/20 hover:bg-white/20" type="button" data-keyword="안전 체크리스트">#안전 체크리스트</button>
-            </div>
+              <ul>
+                <li><time datetime="2026-06-10">2026.06.10</time><a href="#contact">상반기 사업장 안전진단 상담 접수 예시</a></li>
+                <li><time datetime="2026-06-03">2026.06.03</time><a href="#contact">온열질환 예방 체크리스트 배포 예시</a></li>
+                <li><time datetime="2026-05-29">2026.05.29</time><a href="#contact">관리감독자 교육 과정 모집 예시</a></li>
+              </ul>
+            </article>
+            <article class="board-card">
+              <div class="board-head">
+                <h3>자료실</h3>
+                <a href="#contact">자료 요청</a>
+              </div>
+              <ul>
+                <li><span>체크리스트</span><a href="#contact">월간 사업장 안전점검표 예시</a></li>
+                <li><span>교육자료</span><a href="#contact">작업 전 안전회의 진행 가이드</a></li>
+                <li><span>사례카드</span><a href="#contact">끼임 사고 예방 포인트 예시</a></li>
+              </ul>
+            </article>
+            <article class="board-card">
+              <div class="board-head">
+                <h3>교육 일정</h3>
+                <a href="#contact">신청 문의</a>
+              </div>
+              <ul>
+                <li><time datetime="2026-06-18">2026.06.18</time><a href="#contact">위험성평가 담당자 실습 과정</a></li>
+                <li><time datetime="2026-06-25">2026.06.25</time><a href="#contact">건설현장 안전점검 실무</a></li>
+                <li><time datetime="2026-07-02">2026.07.02</time><a href="#contact">신규 근로자 안전교육</a></li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <section aria-label="빠른 업무" class="-mt-16 relative z-10">
-        <div class="mx-auto w-[min(1240px,calc(100%-32px))] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-soft">
-          <div class="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8">
-            <a class="group border-b border-r border-slate-200 p-5 hover:bg-safety2" href="#education">
-              <span class="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-safety2 text-safety group-hover:bg-white">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
-              </span>
-              <strong class="block text-sm font-black text-navy">교육 신청</strong>
-            </a>
-            <a class="group border-b border-r border-slate-200 p-5 hover:bg-safety2" href="#services">
-              <span class="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-safety2 text-safety group-hover:bg-white">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 4 7v6c0 4 3.3 7.4 8 8 4.7-.6 8-4 8-8V7z"></path><path d="m9 12 2 2 4-5"></path></svg>
-              </span>
-              <strong class="block text-sm font-black text-navy">위험성 평가</strong>
-            </a>
-            <a class="group border-b border-r border-slate-200 p-5 hover:bg-safety2" href="#services">
-              <span class="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-safety2 text-safety group-hover:bg-white">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v12H4z"></path><path d="M8 21h8M12 17v4M8 9h8M8 13h5"></path></svg>
-              </span>
-              <strong class="block text-sm font-black text-navy">현장 점검</strong>
-            </a>
-            <a class="group border-b border-r border-slate-200 p-5 hover:bg-safety2" href="#resources">
-              <span class="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-safety2 text-safety group-hover:bg-white">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"></path><path d="M14 3v4h4M9 12h6M9 16h6"></path></svg>
-              </span>
-              <strong class="block text-sm font-black text-navy">자료 찾기</strong>
-            </a>
-            <a class="group border-b border-r border-slate-200 p-5 hover:bg-safety2" href="#notice">
-              <span class="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-safety2 text-safety group-hover:bg-white">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 4h10v4H7z"></path><path d="M5 8h14v12H5zM8 12h8M8 16h5"></path></svg>
-              </span>
-              <strong class="block text-sm font-black text-navy">교육 일정</strong>
-            </a>
-            <a class="group border-b border-r border-slate-200 p-5 hover:bg-safety2" href="#process">
-              <span class="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-safety2 text-safety group-hover:bg-white">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path><path d="M8 7v10"></path></svg>
-              </span>
-              <strong class="block text-sm font-black text-navy">진행 절차</strong>
-            </a>
-            <a class="group border-b border-r border-slate-200 p-5 hover:bg-safety2" href="#contact">
-              <span class="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-safety2 text-safety group-hover:bg-white">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h4"></path></svg>
-              </span>
-              <strong class="block text-sm font-black text-navy">상담 예약</strong>
-            </a>
-            <a class="group border-b border-slate-200 p-5 hover:bg-safety2" href="#contact">
-              <span class="mb-3 grid h-11 w-11 place-items-center rounded-lg bg-safety2 text-safety group-hover:bg-white">
-                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M5 8h14M7 14h10"></path></svg>
-              </span>
-              <strong class="block text-sm font-black text-navy">맞춤 문의</strong>
-            </a>
+      <section id="process" class="section process-section" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Consulting Flow</p>
+            <h2 id="process-title">문의부터 개선관리까지 명확한 5단계</h2>
+            <p>처음 방문한 담당자도 다음 행동을 바로 알 수 있도록 상담 흐름을 단순하고 선명하게 정리했습니다.</p>
+          </div>
+
+          <div class="process-grid">
+            <article><strong>01</strong><h3>상담 접수</h3><p>업종, 인원, 현장 위치, 관심 서비스를 입력합니다.</p></article>
+            <article><strong>02</strong><h3>현황 확인</h3><p>작업공정, 위험작업, 교육 대상자를 확인합니다.</p></article>
+            <article><strong>03</strong><h3>계획 수립</h3><p>교육, 점검, 자료 제공 범위와 일정을 정리합니다.</p></article>
+            <article><strong>04</strong><h3>실행</h3><p>현장 확인, 교육 운영, 체크리스트 배포를 진행합니다.</p></article>
+            <article><strong>05</strong><h3>개선 관리</h3><p>개선 이력과 재점검 계획을 남깁니다.</p></article>
           </div>
         </div>
       </section>
 
-      <section id="services" class="bg-slate-50 py-24">
-        <div class="mx-auto w-[min(1240px,calc(100%-32px))]">
-          <div class="mb-10 max-w-3xl">
-            <p class="mb-3 text-sm font-black uppercase text-safety">Service Map</p>
-            <h2 class="text-3xl font-black leading-tight text-navy sm:text-4xl">필요한 안전 업무를 빠르게 찾는 서비스 구조</h2>
-            <p class="mt-4 text-lg leading-8 text-slate-600">
-              사업장 규모, 업종, 위험작업 특성에 맞춰 교육, 진단, 컨설팅, 자료 활용을 하나의 흐름으로 설계합니다.
+      <section id="contact" class="section section-muted" aria-labelledby="contact-title">
+        <div class="container contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">안전교육과 컨설팅을 문의하세요</h2>
+            <p>
+              회사명과 현장 상황을 남기면, 실제 운영 환경에서는 담당자가 일정과 서비스 범위를 안내하는
+              흐름으로 연결됩니다.
             </p>
-          </div>
-
-          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <span class="mb-4 inline-flex rounded-md bg-safety2 px-3 py-1 text-sm font-black text-safety">01 위험성 평가</span>
-              <h3 class="text-xl font-black text-navy">사업장 위험요인 발굴과 개선대책</h3>
-              <p class="mt-3 text-slate-600">설비, 작업절차, 유해인자, 반복 사고 가능성을 점검하고 개선 우선순위를 정리합니다.</p>
-            </article>
-            <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <span class="mb-4 inline-flex rounded-md bg-safety2 px-3 py-1 text-sm font-black text-safety">02 관리체계</span>
-              <h3 class="text-xl font-black text-navy">안전보건관리체계 구축</h3>
-              <p class="mt-3 text-slate-600">책임, 목표, 점검, 교육, 개선 활동이 반복되도록 현장형 관리 기준을 설계합니다.</p>
-            </article>
-            <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <span class="mb-4 inline-flex rounded-md bg-safety2 px-3 py-1 text-sm font-black text-safety">03 교육</span>
-              <h3 class="text-xl font-black text-navy">법정교육과 직무별 안전교육</h3>
-              <p class="mt-3 text-slate-600">관리감독자, 신규 근로자, 특별안전보건교육 등 대상별 과정을 예시 형태로 안내합니다.</p>
-            </article>
-            <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <span class="mb-4 inline-flex rounded-md bg-safety2 px-3 py-1 text-sm font-black text-safety">04 건설안전</span>
-              <h3 class="text-xl font-black text-navy">건설현장 안전점검</h3>
-              <p class="mt-3 text-slate-600">추락, 낙하, 장비, 임시시설물 위험을 중심으로 현장별 점검 항목을 제공합니다.</p>
-            </article>
-            <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <span class="mb-4 inline-flex rounded-md bg-safety2 px-3 py-1 text-sm font-black text-safety">05 화학/환경</span>
-              <h3 class="text-xl font-black text-navy">화학물질 및 환경 안전</h3>
-              <p class="mt-3 text-slate-600">취급 물질, 보관, 비상대응, 표시 기준을 점검하고 실무 양식으로 정리합니다.</p>
-            </article>
-            <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-              <span class="mb-4 inline-flex rounded-md bg-safety2 px-3 py-1 text-sm font-black text-safety">06 자료센터</span>
-              <h3 class="text-xl font-black text-navy">체크리스트와 교육자료</h3>
-              <p class="mt-3 text-slate-600">업종별 체크리스트, 사고 예방 카드, 교육 목차를 다운로드형 자료처럼 탐색합니다.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" class="py-24">
-        <div class="mx-auto w-[min(1240px,calc(100%-32px))]">
-          <div class="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <div>
-              <p class="mb-3 text-sm font-black uppercase text-safety">Education</p>
-              <h2 class="text-3xl font-black leading-tight text-navy sm:text-4xl">대상별 안전교육 프로그램</h2>
-            </div>
-            <p class="max-w-xl text-slate-600">아래 과정명과 일정은 가상 예시입니다. 실제 운영 시 교육기관 승인 범위와 법정 기준을 확인해야 합니다.</p>
-          </div>
-
-          <div class="grid gap-4 lg:grid-cols-5">
-            <article class="rounded-xl border border-slate-200 p-5">
-              <span class="text-sm font-black text-safety">관리자</span>
-              <h3 class="mt-3 text-lg font-black text-navy">관리감독자 교육</h3>
-              <p class="mt-3 text-sm leading-6 text-slate-600">작업 전 회의, 위험요인 보고, 보호구 확인, 개선 조치 흐름을 다룹니다.</p>
-              <dl class="mt-5 grid gap-2 text-sm">
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">방식</dt><dd class="font-bold">집체</dd></div>
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">시간</dt><dd class="font-bold">8시간</dd></div>
-              </dl>
-            </article>
-            <article class="rounded-xl border border-slate-200 p-5">
-              <span class="text-sm font-black text-safety">입문</span>
-              <h3 class="mt-3 text-lg font-black text-navy">신규 근로자 교육</h3>
-              <p class="mt-3 text-sm leading-6 text-slate-600">작업장 출입 전 알아야 할 기본 안전수칙과 비상대응 절차를 안내합니다.</p>
-              <dl class="mt-5 grid gap-2 text-sm">
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">방식</dt><dd class="font-bold">온라인</dd></div>
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">시간</dt><dd class="font-bold">4시간</dd></div>
-              </dl>
-            </article>
-            <article class="rounded-xl border border-slate-200 p-5">
-              <span class="text-sm font-black text-safety">고위험</span>
-              <h3 class="mt-3 text-lg font-black text-navy">특별안전보건교육</h3>
-              <p class="mt-3 text-sm leading-6 text-slate-600">화기, 밀폐공간, 중량물, 고소작업 등 위험작업별 핵심 기준을 정리합니다.</p>
-              <dl class="mt-5 grid gap-2 text-sm">
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">방식</dt><dd class="font-bold">혼합</dd></div>
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">시간</dt><dd class="font-bold">16시간</dd></div>
-              </dl>
-            </article>
-            <article class="rounded-xl border border-slate-200 p-5">
-              <span class="text-sm font-black text-safety">실습</span>
-              <h3 class="mt-3 text-lg font-black text-navy">위험성평가 담당자</h3>
-              <p class="mt-3 text-sm leading-6 text-slate-600">위험요인 발굴, 위험성 결정, 감소대책 작성, 기록 관리 방법을 실습합니다.</p>
-              <dl class="mt-5 grid gap-2 text-sm">
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">방식</dt><dd class="font-bold">워크숍</dd></div>
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">시간</dt><dd class="font-bold">6시간</dd></div>
-              </dl>
-            </article>
-            <article class="rounded-xl border border-slate-200 p-5">
-              <span class="text-sm font-black text-safety">상시</span>
-              <h3 class="mt-3 text-lg font-black text-navy">온라인 안전교육</h3>
-              <p class="mt-3 text-sm leading-6 text-slate-600">반복 수강, 수료 관리, 부서별 학습 현황 확인이 필요한 조직에 적합합니다.</p>
-              <dl class="mt-5 grid gap-2 text-sm">
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">방식</dt><dd class="font-bold">LMS</dd></div>
-                <div class="flex justify-between border-t pt-2"><dt class="text-slate-500">시간</dt><dd class="font-bold">선택</dd></div>
-              </dl>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="process" class="bg-navy py-24 text-white">
-        <div class="mx-auto w-[min(1240px,calc(100%-32px))]">
-          <div class="mb-10 max-w-3xl">
-            <p class="mb-3 text-sm font-black uppercase text-emerald-200">Consulting Flow</p>
-            <h2 class="text-3xl font-black leading-tight sm:text-4xl">문의부터 개선안까지 한눈에 보이는 진행 절차</h2>
-            <p class="mt-4 text-lg leading-8 text-white/75">처음 방문한 담당자도 다음 행동을 바로 알 수 있도록 단계형 UX로 구성했습니다.</p>
-          </div>
-
-          <div class="grid gap-4 md:grid-cols-5">
-            <div class="rounded-xl border border-white/15 bg-white/10 p-5">
-              <strong class="text-3xl font-black text-warning">01</strong>
-              <h3 class="mt-4 font-black">상담 접수</h3>
-              <p class="mt-2 text-sm leading-6 text-white/70">업종, 인원, 현장 위치, 희망 서비스를 입력합니다.</p>
-            </div>
-            <div class="rounded-xl border border-white/15 bg-white/10 p-5">
-              <strong class="text-3xl font-black text-warning">02</strong>
-              <h3 class="mt-4 font-black">현황 확인</h3>
-              <p class="mt-2 text-sm leading-6 text-white/70">작업공정과 위험작업, 교육 대상자를 확인합니다.</p>
-            </div>
-            <div class="rounded-xl border border-white/15 bg-white/10 p-5">
-              <strong class="text-3xl font-black text-warning">03</strong>
-              <h3 class="mt-4 font-black">계획 수립</h3>
-              <p class="mt-2 text-sm leading-6 text-white/70">교육, 점검, 자료 제공 범위를 정리합니다.</p>
-            </div>
-            <div class="rounded-xl border border-white/15 bg-white/10 p-5">
-              <strong class="text-3xl font-black text-warning">04</strong>
-              <h3 class="mt-4 font-black">실행</h3>
-              <p class="mt-2 text-sm leading-6 text-white/70">현장 확인, 교육 운영, 체크리스트 배포를 진행합니다.</p>
-            </div>
-            <div class="rounded-xl border border-white/15 bg-white/10 p-5">
-              <strong class="text-3xl font-black text-warning">05</strong>
-              <h3 class="mt-4 font-black">개선 관리</h3>
-              <p class="mt-2 text-sm leading-6 text-white/70">개선 이력과 재점검 계획을 남깁니다.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="resources" class="bg-slate-50 py-24">
-        <div class="mx-auto grid w-[min(1240px,calc(100%-32px))] gap-10 lg:grid-cols-[360px_1fr]">
-          <div>
-            <p class="mb-3 text-sm font-black uppercase text-safety">Resources</p>
-            <h2 class="text-3xl font-black leading-tight text-navy sm:text-4xl">자료실과 알림을 업무별로 정리</h2>
-            <p class="mt-4 leading-8 text-slate-600">공공기관 사이트에서 자주 쓰는 자료 탐색 구조를 참고해, 민간 홈페이지에 맞는 간결한 카드형 목록으로 재구성했습니다.</p>
-          </div>
-
-          <div id="notice" class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm" data-tabs>
-            <div class="grid border-b border-slate-200 bg-slate-100 sm:grid-cols-3" role="tablist" aria-label="자료 및 알림">
-              <button class="px-5 py-4 text-left font-black text-navy data-[active=true]:bg-white data-[active=true]:shadow-[inset_0_4px_0_#128064]" type="button" role="tab" data-tab="notice-list" data-active="true">공지사항</button>
-              <button class="px-5 py-4 text-left font-black text-slate-500 data-[active=true]:bg-white data-[active=true]:text-navy data-[active=true]:shadow-[inset_0_4px_0_#128064]" type="button" role="tab" data-tab="resource-list">자료실</button>
-              <button class="px-5 py-4 text-left font-black text-slate-500 data-[active=true]:bg-white data-[active=true]:text-navy data-[active=true]:shadow-[inset_0_4px_0_#128064]" type="button" role="tab" data-tab="schedule-list">교육 일정</button>
-            </div>
-            <div class="grid" id="notice-list" role="tabpanel">
-              <a class="grid gap-2 border-b border-slate-200 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <time class="font-black text-safety" datetime="2026-06-10">2026.06.10</time>
-                <span class="font-extrabold text-navy">상반기 사업장 안전진단 상담 접수 예시</span>
-              </a>
-              <a class="grid gap-2 border-b border-slate-200 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <time class="font-black text-safety" datetime="2026-06-03">2026.06.03</time>
-                <span class="font-extrabold text-navy">온열질환 예방 체크리스트 배포 예시</span>
-              </a>
-              <a class="grid gap-2 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <time class="font-black text-safety" datetime="2026-05-29">2026.05.29</time>
-                <span class="font-extrabold text-navy">관리감독자 교육 과정 모집 예시</span>
-              </a>
-            </div>
-            <div class="hidden grid" id="resource-list" role="tabpanel">
-              <a class="grid gap-2 border-b border-slate-200 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <span class="font-black text-safety">체크리스트</span>
-                <span class="font-extrabold text-navy">월간 사업장 안전점검표 예시</span>
-              </a>
-              <a class="grid gap-2 border-b border-slate-200 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <span class="font-black text-safety">교육자료</span>
-                <span class="font-extrabold text-navy">작업 전 안전회의 진행 가이드</span>
-              </a>
-              <a class="grid gap-2 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <span class="font-black text-safety">사례카드</span>
-                <span class="font-extrabold text-navy">끼임 사고 예방 포인트 예시</span>
-              </a>
-            </div>
-            <div class="hidden grid" id="schedule-list" role="tabpanel">
-              <a class="grid gap-2 border-b border-slate-200 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <time class="font-black text-safety" datetime="2026-06-18">2026.06.18</time>
-                <span class="font-extrabold text-navy">위험성평가 담당자 실습 과정</span>
-              </a>
-              <a class="grid gap-2 border-b border-slate-200 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <time class="font-black text-safety" datetime="2026-06-25">2026.06.25</time>
-                <span class="font-extrabold text-navy">건설현장 안전점검 실무</span>
-              </a>
-              <a class="grid gap-2 p-5 hover:bg-slate-50 sm:grid-cols-[120px_1fr]" href="#contact">
-                <time class="font-black text-safety" datetime="2026-07-02">2026.07.02</time>
-                <span class="font-extrabold text-navy">신규 근로자 안전교육</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-24">
-        <div class="mx-auto w-[min(1240px,calc(100%-32px))]">
-          <div class="grid gap-6 rounded-2xl bg-gradient-to-br from-navy to-safety p-8 text-white shadow-soft lg:grid-cols-[1fr_1.3fr] lg:p-12">
-            <div>
-              <p class="mb-3 text-sm font-black uppercase text-emerald-200">Example Metrics</p>
-              <h2 class="text-3xl font-black leading-tight sm:text-4xl">신뢰를 보여주되, 검증 가능한 수치만 사용하세요</h2>
-              <p class="mt-4 leading-8 text-white/75">아래 지표는 홈페이지 시안용 가상 수치입니다. 실제 사업 사이트에서는 근거가 있는 실적만 표시해야 합니다.</p>
-            </div>
-            <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              <div class="rounded-xl border border-white/15 bg-white/10 p-5"><strong class="block text-4xl font-black">42K+</strong><span class="mt-2 block text-sm font-bold text-white/75">교육 수료자 예시</span></div>
-              <div class="rounded-xl border border-white/15 bg-white/10 p-5"><strong class="block text-4xl font-black">860+</strong><span class="mt-2 block text-sm font-bold text-white/75">컨설팅 사업장 예시</span></div>
-              <div class="rounded-xl border border-white/15 bg-white/10 p-5"><strong class="block text-4xl font-black">3.4K</strong><span class="mt-2 block text-sm font-bold text-white/75">현장 점검 예시</span></div>
-              <div class="rounded-xl border border-white/15 bg-white/10 p-5"><strong class="block text-4xl font-black">96%</strong><span class="mt-2 block text-sm font-bold text-white/75">만족도 예시</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="bg-slate-50 py-24">
-        <div class="mx-auto grid w-[min(1240px,calc(100%-32px))] gap-10 lg:grid-cols-[420px_1fr]">
-          <div>
-            <p class="mb-3 text-sm font-black uppercase text-safety">Contact</p>
-            <h2 class="text-3xl font-black leading-tight text-navy sm:text-4xl">안전교육과 컨설팅을 문의하세요</h2>
-            <p class="mt-4 leading-8 text-slate-600">회사명과 현장 상황을 남기면, 실제 서비스에서는 담당자가 일정과 범위를 안내하는 흐름으로 연결됩니다.</p>
-            <ul class="mt-7 grid gap-3 text-sm font-bold text-navy">
-              <li class="rounded-lg bg-white p-4 ring-1 ring-slate-200">제조업, 건설업, 물류 현장 맞춤 상담</li>
-              <li class="rounded-lg bg-white p-4 ring-1 ring-slate-200">교육 대상과 인원에 따른 과정 추천</li>
-              <li class="rounded-lg bg-white p-4 ring-1 ring-slate-200">위험성 평가와 현장 점검 범위 사전 협의</li>
+            <ul>
+              <li>제조업, 건설업, 물류 현장 맞춤 상담</li>
+              <li>교육 대상과 인원에 따른 과정 추천</li>
+              <li>위험성 평가와 현장 점검 범위 사전 협의</li>
             </ul>
           </div>
 
-          <form class="grid gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-soft md:grid-cols-2" aria-label="상담 문의 양식" data-contact-form>
-            <div class="grid gap-2">
-              <label class="font-black text-navy" for="company">회사명</label>
-              <input class="focus-ring min-h-12 rounded-lg border border-slate-300 px-4" id="company" name="company" type="text" autocomplete="organization" required />
+          <form class="contact-form" aria-label="상담 문의 양식" data-contact-form>
+            <div class="form-field">
+              <label for="company">회사명</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required />
             </div>
-            <div class="grid gap-2">
-              <label class="font-black text-navy" for="name">담당자명</label>
-              <input class="focus-ring min-h-12 rounded-lg border border-slate-300 px-4" id="name" name="name" type="text" autocomplete="name" required />
+            <div class="form-field">
+              <label for="name">담당자명</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
             </div>
-            <div class="grid gap-2">
-              <label class="font-black text-navy" for="phone">연락처</label>
-              <input class="focus-ring min-h-12 rounded-lg border border-slate-300 px-4" id="phone" name="phone" type="tel" autocomplete="tel" required />
+            <div class="form-field">
+              <label for="phone">연락처</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
             </div>
-            <div class="grid gap-2">
-              <label class="font-black text-navy" for="service">관심 서비스</label>
-              <select class="focus-ring min-h-12 rounded-lg border border-slate-300 px-4" id="service" name="service" required>
+            <div class="form-field">
+              <label for="service">관심 서비스</label>
+              <select id="service" name="service" required>
                 <option value="">선택해주세요</option>
                 <option>산업안전 교육</option>
                 <option>위험성 평가</option>
@@ -499,122 +317,87 @@
                 <option>화학물질/환경 안전</option>
               </select>
             </div>
-            <div class="grid gap-2 md:col-span-2">
-              <label class="font-black text-navy" for="message">문의 내용</label>
-              <textarea class="focus-ring min-h-36 rounded-lg border border-slate-300 px-4 py-3" id="message" name="message" required></textarea>
+            <div class="form-field full">
+              <label for="message">문의 내용</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-            <label class="flex gap-3 text-sm leading-6 text-slate-600 md:col-span-2">
-              <input class="mt-1 h-5 w-5 accent-safety" type="checkbox" required />
-              <span>상담 안내를 위한 개인정보 수집 및 이용에 동의합니다. 실제 서비스에서는 개인정보처리방침과 보관 기간을 명확히 고지해야 합니다.</span>
+            <label class="agreement full">
+              <input type="checkbox" required />
+              <span>상담 안내를 위한 개인정보 수집 및 이용에 동의합니다.</span>
             </label>
-            <button class="focus-ring rounded-lg bg-safety px-6 py-4 font-black text-white hover:bg-emerald-800 md:col-span-2" type="submit">
-              문의 접수하기
-            </button>
-            <p class="min-h-6 font-bold text-safety md:col-span-2" role="status" aria-live="polite" data-form-status></p>
+            <button class="btn btn-primary full" type="submit">문의 접수하기</button>
+            <p class="form-status full" role="status" aria-live="polite" data-form-status></p>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="bg-[#0c1829] py-10 text-white/75">
-      <div class="mx-auto flex w-[min(1240px,calc(100%-32px))] flex-col justify-between gap-8 lg:flex-row">
+    <footer class="site-footer">
+      <div class="container footer-layout">
         <div>
-          <strong class="block text-lg font-black text-white">00Safety</strong>
-          <p class="mt-3 max-w-3xl leading-7">서울특별시 중구 세이프로 24, 8층 | 대표번호 02-0000-0000 | hello@00safety.store</p>
-          <p class="mt-2 text-sm">본 페이지는 가상의 홈페이지 예시이며, 특정 공공기관 또는 협회와 관계가 없습니다.</p>
+          <strong>00Safety</strong>
+          <p>서울특별시 중구 세이프로 24, 8층 | 대표번호 02-0000-0000 | hello@00safety.store</p>
+          <p>본 페이지는 가상의 홈페이지 예시이며, 특정 공공기관 또는 협회와 관계가 없습니다.</p>
         </div>
-        <nav class="flex flex-wrap gap-4 text-sm font-bold" aria-label="푸터 메뉴">
-          <a class="hover:text-white" href="#contact">개인정보처리방침</a>
-          <a class="hover:text-white" href="#contact">이용약관</a>
-          <a class="hover:text-white" href="#main">맨 위로</a>
+        <nav aria-label="푸터 메뉴">
+          <a href="#contact">개인정보처리방침</a>
+          <a href="#contact">이용약관</a>
+          <a href="#main">맨 위로</a>
         </nav>
       </div>
-      <div class="mx-auto mt-8 w-[min(1240px,calc(100%-32px))] border-t border-white/10 pt-6 text-sm">© 2026 00Safety. All rights reserved.</div>
+      <div class="container copyright">© 2026 00Safety. All rights reserved.</div>
     </footer>
 
     <script>
-      const mobileButton = document.querySelector("[data-menu-button]");
-      const mobileMenu = document.querySelector("[data-mobile-menu]");
-      const searchButton = document.querySelector("[data-open-search]");
-      const searchPanel = document.querySelector("[data-search-panel]");
-      const siteSearch = document.querySelector("#site-search");
-      const heroSearch = document.querySelector("#hero-search");
+      const header = document.querySelector("[data-header]");
+      const menuButton = document.querySelector("[data-menu-button]");
+      const nav = document.querySelector("[data-nav]");
+      const searchForms = document.querySelectorAll("[data-search-form]");
+      const contactForm = document.querySelector("[data-contact-form]");
+      const formStatus = document.querySelector("[data-form-status]");
 
-      mobileButton?.addEventListener("click", () => {
-        const open = mobileMenu.classList.toggle("hidden") === false;
-        mobileButton.setAttribute("aria-expanded", String(open));
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("is-scrolled", window.scrollY > 8);
       });
 
-      mobileMenu?.addEventListener("click", (event) => {
+      menuButton.addEventListener("click", () => {
+        const open = nav.classList.toggle("is-open");
+        menuButton.setAttribute("aria-expanded", String(open));
+      });
+
+      nav.addEventListener("click", (event) => {
         if (event.target instanceof HTMLAnchorElement) {
-          mobileMenu.classList.add("hidden");
-          mobileButton?.setAttribute("aria-expanded", "false");
+          nav.classList.remove("is-open");
+          menuButton.setAttribute("aria-expanded", "false");
         }
       });
 
-      searchButton?.addEventListener("click", () => {
-        const open = searchPanel.classList.toggle("hidden") === false;
-        searchButton.setAttribute("aria-expanded", String(open));
-        if (open) siteSearch?.focus();
-      });
-
-      function moveToSearchResult(query) {
+      function findSection(query) {
         const word = query.trim();
-        if (!word) return false;
+        if (!word) return;
         const sections = [...document.querySelectorAll("main section")];
         const match = sections.find((section) => section.textContent.includes(word));
         if (match) {
           match.scrollIntoView({ behavior: "smooth", block: "start" });
-          return true;
         }
-        return false;
       }
 
-      document.querySelectorAll("form[role='search']").forEach((form) => {
+      searchForms.forEach((form) => {
         form.addEventListener("submit", (event) => {
           event.preventDefault();
           const input = form.querySelector("input[type='search']");
-          const found = moveToSearchResult(input?.value || "");
-          if (!found && input) {
-            input.value = "";
-            input.placeholder = "검색 결과가 없습니다. 다른 단어를 입력하세요.";
-            input.focus();
-          }
+          findSection(input.value);
         });
       });
 
-      document.querySelectorAll("[data-keyword]").forEach((button) => {
-        button.addEventListener("click", () => {
-          if (heroSearch) heroSearch.value = button.dataset.keyword || "";
-          moveToSearchResult(button.dataset.keyword || "");
-        });
-      });
-
-      document.querySelectorAll("[data-tabs]").forEach((tabSet) => {
-        const tabs = [...tabSet.querySelectorAll("[data-tab]")];
-        const panels = tabs.map((tab) => document.getElementById(tab.dataset.tab));
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", () => {
-            tabs.forEach((item) => {
-              const active = item === tab;
-              item.dataset.active = String(active);
-              item.classList.toggle("text-slate-500", !active);
-            });
-            panels.forEach((panel) => panel?.classList.toggle("hidden", panel.id !== tab.dataset.tab));
-          });
-        });
-      });
-
-      document.querySelector("[data-contact-form]")?.addEventListener("submit", (event) => {
+      contactForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const form = event.currentTarget;
-        const status = document.querySelector("[data-form-status]");
-        if (!form.checkValidity()) {
-          form.reportValidity();
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
           return;
         }
-        form.reset();
-        status.textContent = "문의가 접수된 예시 상태입니다. 실제 운영 시 서버 또는 폼 서비스 연동이 필요합니다.";
+        contactForm.reset();
+        formStatus.textContent = "문의가 접수된 예시 상태입니다. 실제 운영 시 서버 또는 폼 서비스 연동이 필요합니다.";
       });
     </script>
   </body>
