@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nadia18sh-spec.github.io/sitemap.xml
+Sitemap: https://00safety.store/sitemap.xml
